@@ -646,6 +646,11 @@ case "${targ}" in
 	targ_cflags=-DOLD_FREEBSD_ABI_LABEL ;;
     esac
     ;;
+  i[3-7]86-*-inwox*)
+    targ_defvec=i386_elf32_vec
+    targ_selvecs=
+    targ64_selvecs=x86_64_elf64_vec
+    ;;
   i[3-7]86-*-netbsd* | i[3-7]86-*-knetbsd*-gnu)
     targ_defvec=i386_elf32_vec
     targ_selvecs="iamcu_elf32_vec"
@@ -703,6 +708,11 @@ case "${targ}" in
   x86_64-*-haiku*)
     targ_defvec=x86_64_elf64_vec
     targ_selvecs="i386_elf32_vec"
+    want64=true
+    ;;
+  x86_64-*-inwox*)
+    targ_defvec=x86_64_elf64_vec
+    targ_selvecs=i386_elf32_vec
     want64=true
     ;;
   x86_64-*-netbsd* | x86_64-*-openbsd*)

@@ -843,6 +843,7 @@ TARG_ENV_HFILES = \
 	config/te-hppalinux64.h \
 	config/te-ia64aix.h \
 	config/te-interix.h \
+	config/te-inwox.h \
 	config/te-lynx.h \
 	config/te-macos.h \
 	config/te-nbsd.h \

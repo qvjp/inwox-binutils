@@ -376,6 +376,15 @@ i[3-7]86-*-bsd386)	targ_emul=i386bsd
 i[3-7]86-*-bsdi*)	targ_emul=i386bsd
 			targ_extra_ofiles=
 			;;
+i[3-7]86-*-inwox*)
+			targ_emul=elf_i386_inwox
+			targ_extra_emuls=elf_i386
+			targ64_extra_emuls="elf_x86_64_inwox elf_x86_64"
+			;;
+x86_64-*-inwox*)
+			targ_emul=elf_x86_64_inwox
+			targ_extra_emuls="elf_i386_inwox elf_x86_64 elf_i386"
+			;;
 i[3-7]86-*-linux-*)	targ_emul=elf_i386
 			targ_extra_emuls="elf_iamcu"
 			targ64_extra_emuls="elf_x86_64 elf32_x86_64"
